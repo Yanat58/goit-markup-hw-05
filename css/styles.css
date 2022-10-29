@@ -72,6 +72,14 @@ ul {
   height: auto;
 }
 /* nav */
+/* .item {
+  position: relative;
+} */
+/* line header */
+.header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
 
 .nav-link {
   display: block;
@@ -84,11 +92,18 @@ ul {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-
-/* line header */
-.header {
-  border-bottom: 1px solid #ececec;
+.nav-link.current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  bottom: 0;
 }
+
+
 .page-header,
 .box-header {
   display: flex;
@@ -141,11 +156,10 @@ ul {
 
 .contacts-link:hover,
 .contacts-link:focus {
-  fill: var(--accent-color)
+  fill: var(--accent-color);
 }
 .contacts-icon {
   margin-right: 10px;
-  
 }
 
 /* hero overlay */
@@ -324,21 +338,23 @@ ul {
   margin-top: 16px;
 }
 
-.social-icon {
+.social-link {
   display: block;
   width: 44px;
   height: 44px;
   padding: 12px;
   border-radius: 50%;
-  fill: var(--icon-color);
+  color: var(--icon-color);
 }
 
-.social-icon:hover ,
-.social-icon:focus {
-  fill: var(--primary-white-color);
+.social-link:hover,
+.social-link:focus {
+  color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
-
+.social-icon {
+  fill: currentColor;
+}
 
 /* section customers */
 
@@ -349,21 +365,24 @@ ul {
   gap: 30px;
 }
 
-.customers-icon {
+.customers-link {
   display: block;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   padding: 16px 32px;
-  fill: var(--icon-color);
-}
-.customers-icon:hover,
-.customers-icon:focus {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--icon-color);
 }
 
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.customers-icon {
+  fill: currentColor;
+}
 
 /* footer */
 
@@ -398,7 +417,7 @@ ul {
   color: var(--primary-white-color);
 }
 
-.contacts-social-wrap {  
+.contacts-social-wrap {
   margin-left: 70px;
 }
 
@@ -416,19 +435,22 @@ ul {
   justify-content: flex-start;
 }
 
-.contakts-social-icon { 
+.contakts-social-link {
   display: block;
   width: 44px;
   height: 44px;
   padding: 12px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
 }
 
-.contakts-social-icon:hover,
-.contakts-social-icon:focus {
+.contakts-social-link:hover,
+.contakts-social-link:focus {
   background-color: var(--accent-color);
+}
+.contakts-social-icon {
+  fill: currentColor;
 }
 
 /* filter */
