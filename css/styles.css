@@ -225,6 +225,27 @@ ul {
 .button-basic:focus {
   background-color: var(--button-hover-color);
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1024px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+
+}
+
 /* особливості */
 
 .features-list {
@@ -300,7 +321,7 @@ ul {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.gallery-label-title {
+.gallery-label-text {
   position: absolute;
   bottom: 0;
   padding: 27px ;
@@ -569,34 +590,25 @@ ul {
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-link:hover .portfolio-icon,
-.portfolio-link:focus .portfolio-icon {
-  opacity: 1;
- 
-}
-
-.portfolio-link:hover .portfolio-thumb-text,
-.portfolio-link:focus .portfolio-thumb-text {
-   transform: translateY(0);
-   position: absolute;
-} 
-
 .portfolio-thumb {
+  top: 0;
+  left: 0;
   position: relative;
   overflow: hidden;
+  
 }
-
    
 .portfolio-thumb-text {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 0px;
   left: 0;
   padding: 63px 24px;
+  
 
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
    background-color: rgba(33, 150, 243, 0.9);
@@ -605,14 +617,11 @@ ul {
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-icon {
-  position: absolute;
-  top: 338px;
-  left: 218px;
-  fill: #000;
-  opacity: 0; 
-   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
+.portfolio-link:hover .portfolio-thumb-text,
+.portfolio-link:focus .portfolio-thumb-text {
+   transform: translateY(0);
+   position: absolute;
+} 
 
 .portfolio-wrap {
   padding: 20px 24px;
