@@ -239,6 +239,8 @@ ul {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition: opacity 205ms var(--animation-function), visibility 250ms var(--animation-function), transform 250ms var(--animation-function);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.85);
