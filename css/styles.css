@@ -240,7 +240,9 @@ ul {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity 205ms var(--animation-function), visibility 250ms var(--animation-function), transform 250ms var(--animation-function);
+  transition: opacity 205ms var(--animation-function),
+    visibility 250ms var(--animation-function),
+    transform 250ms var(--animation-function);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.85);
@@ -264,6 +266,7 @@ ul {
   width: 30px;
   height: 30px;
   padding: 6px;
+  cursor: pointer;
   background-color: #fff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
